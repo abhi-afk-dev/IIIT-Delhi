@@ -40,7 +40,7 @@ body {
   text-align: center;
   overflow: hidden;
   white-space: nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 3px 0;
   border-radius: 25px;
 }
