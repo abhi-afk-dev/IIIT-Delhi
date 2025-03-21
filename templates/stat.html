@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Statistics Dashboard</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="/static/style/stat.css" />
+  <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+  <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+</head>
+
+<body>
+  <main class="main-container">
+    <div class="mobile-device">
+      <!-- Status Bar -->
+
+
+      <!-- Header -->
+      <div class="header">
+        <div class="header-container">
+          <!-- <img class="back-button"
+            src="https://imgs.search.brave.com/CrPAhxe0YZySyhSuCBC6HS0mvK7HaqNj4UV3ay_QBcs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tYXhj/ZG4uaWNvbnM4LmNv/bS9wYWNrcy9wcmV2/aWV3LWljb24vYXJy/b3dzLnN2Zw"
+            alt="Back" /> -->
+          <div class="back-button">&rarr;</div>
+          <div class="title">Statistics</div>
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/841a7e3f1ac84770b1486b2c2e846a34/3e69cb854d7cf404708292b56ca67da489540751?placeholderIfAbsent=true"
+            class="profile-image" alt="Profile" />
+        </div>
+
+        <!-- Period Selector -->
+        <div class="period-selector">
+          <div class="period-title">SELECT PERIOD</div>
+          <div class="period-buttons">
+            <button class="period-button" data-period="Week">Week</button>
+            <button class="period-button" data-period="Month">Month</button>
+            <button class="period-button active" data-period="Year">Year</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Month Stats Section -->
+      <section class="month-stats-section">
+        <div class="month-stats-container">
+          <div class="month-box">
+            <div class="month-label">Month</div>
+            <div class="month-value">July</div>
+            <div class="month-amount">$15,12</div>
+          </div>
+          <div class="date-selectors">
+            <div class="date-selector">
+              <label class="date-label">From:</label>
+              <div class="date-input">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/841a7e3f1ac84770b1486b2c2e846a34/998a4ecbfd9d59822cd8276ac2208e6f0f6f4a09?placeholderIfAbsent=true"
+                  class="calendar-icon" alt="Calendar" />
+                <div class="date-line"></div>
+              </div>
+            </div>
+            <div class="date-selector">
+              <label class="date-label">Till:</label>
+              <div class="date-input">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/841a7e3f1ac84770b1486b2c2e846a34/998a4ecbfd9d59822cd8276ac2208e6f0f6f4a09?placeholderIfAbsent=true"
+                  class="calendar-icon" alt="Calendar" />
+                <div class="date-line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Usage -->
+        <div class="service-usage">
+          <div class="service-column">
+            <div class="service-bar" style="height: 87px;"></div>
+            <div class="service-name">Youtube</div>
+          </div>
+          <div class="service-column">
+            <div class="service-bar" style="height: 119px;"></div>
+            <div class="service-name">Netflix</div>
+          </div>
+          <div class="service-column">
+            <div class="service-bar" style="height: 92px;"></div>
+            <div class="service-name">Figma</div>
+          </div>
+          <div class="service-column">
+            <div class="service-bar" style="height: 57px;"></div>
+            <div class="service-name">Spotify</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Transaction History -->
+      <section class="transaction-section">
+        <div class="transaction-header">
+          <div class="history-title">History</div>
+          <button class="see-all-button">See all</button>
+        </div>
+        <div class="transaction-list">
+          <div class="transactionItem">
+            <!-- Transaction items will be added here via JavaScript -->
+            <div class="transaction-details">
+              <div class="service-detail">
+                <div class="service-title" style="font-size:20px">Figma</div>
+                <div class="service-category" style="font-size:12px">creative</div>
+              </div>
+            </div>
+            <div class="transaction-amount">
+              <div class="amount">-0.33$</div>
+              <div class="card-number">**** 9054</div>
+              <!-- Transaction items will be added here via JavaScript -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Home Indicator -->
+
+    </div>
+  </main>
+  <script src="/static/logic/stat.js"></script>
+</body>
+
+</html>

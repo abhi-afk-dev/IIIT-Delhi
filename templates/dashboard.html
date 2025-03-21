@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crypto Wallet</title>
+  <link rel="stylesheet" href="/static/style/dashboard.css" />
+  <link rel="manifest" href="manifest.json">
+  <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+  <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+</head>
+
+<body>
+  <main class="app-container">
+    <div class="wallet-layout">
+     
+      <div class="wallet-content">
+        <!-- User Header -->
+        <div class="user-header">
+          <div class="user-greeting">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/a17f9c66981147f3b329268bf43fa97f/77ae4533c298ca541716bfcc5b79c96eb1284805?placeholderIfAbsent=true"
+              alt="User avatar" class="user-avatar" />
+            <div class="greeting-text">Hello, Zangetsu</div>
+            <div class="greeting-spacer"></div>
+          </div>
+          <button class="notification-button" aria-label="Notifications">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/a17f9c66981147f3b329268bf43fa97f/05810944e9376f392f0089eef089f892de6b5842?placeholderIfAbsent=true"
+              alt="Notification icon" class="notification-icon" />
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/a17f9c66981147f3b329268bf43fa97f/bb7dc3f19078870758e3324dacfe65d03c0a5912?placeholderIfAbsent=true"
+              alt="Notification indicator" class="notification-indicator" />
+          </button>
+        </div>
+
+        <!-- Balance Card -->
+        <div class="balance-section">
+          <div class="balance-label">Total Balance</div>
+          <div class="balance-card">
+            <div class="balance-amount">
+              <span class="currency-symbol">$</span>1,357.46
+            </div>
+            <div class="balance-growth">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/a17f9c66981147f3b329268bf43fa97f/b3905918-05b7-4de8-9a0e-7c8385c8770d?placeholderIfAbsent=true"
+                alt="Growth indicator" class="growth-indicator" />
+              0.09<span class="currency-symbol">$</span>(0,29%)
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+          <div class="action-button">
+            <button aria-label="Send">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/a17f9c66981147f3b329268bf43fa97f/8d45fbb2d9b1bbea99f69ce101c69ab6602b8995?placeholderIfAbsent=true"
+                alt="Send icon" class="action-icon" />
+            </button>
+            <div class="action-label">Send</div>
+          </div>
+          <div class="action-button">
+            <button aria-label="Receive">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/a17f9c66981147f3b329268bf43fa97f/2f6de337861f2b79ba462a06f8b49a0f848114b3?placeholderIfAbsent=true"
+                alt="Receive icon" class="action-icon" />
+            </button>
+            <div class="action-label">Receive</div>
+          </div>
+          <div class="action-button">
+            <button aria-label="Swap">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/a17f9c66981147f3b329268bf43fa97f/826c981a7729d371fc8d62bd0063d354e11fbd41?placeholderIfAbsent=true"
+                alt="Swap icon" class="action-icon" />
+            </button>
+            <div class="action-label">Swap</div>
+          </div>
+          <div class="action-button">
+            <button aria-label="Add coin">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/a17f9c66981147f3b329268bf43fa97f/83f5225e6ba88d39a60bf7eb2953d3821991340c?placeholderIfAbsent=true"
+                alt="Add coin icon" class="action-icon" />
+            </button>
+            <div class="action-label">Add coin</div>
+          </div>
+        </div>
+
+        <!-- Duplicate Action Buttons (as in original layout) -->
+        <div class="action-buttons">
+          <div class="action-button">
+            <button aria-label="Send">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/a17f9c66981147f3b329268bf43fa97f/8d45fbb2d9b1bbea99f69ce101c69ab6602b8995?placeholderIfAbsent=true"
+                alt="Send icon" class="action-icon" />
+            </button>
+            <div class="action-label">Send</div>
+          </div>
+          <div class="action-button">
+            <button aria-label="Receive">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/a17f9c66981147f3b329268bf43fa97f/2f6de337861f2b79ba462a06f8b49a0f848114b3?placeholderIfAbsent=true"
+                alt="Receive icon" class="action-icon" />
+            </button>
+            <div class="action-label">Receive</div>
+          </div>
+          <div class="action-button">
+            <button aria-label="Swap">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/a17f9c66981147f3b329268bf43fa97f/826c981a7729d371fc8d62bd0063d354e11fbd41?placeholderIfAbsent=true"
+                alt="Swap icon" class="action-icon" />
+            </button>
+            <div class="action-label">Swap</div>
+          </div>
+          <div class="action-button">
+            <button aria-label="Add coin">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/a17f9c66981147f3b329268bf43fa97f/83f5225e6ba88d39a60bf7eb2953d3821991340c?placeholderIfAbsent=true"
+                alt="Add coin icon" class="action-icon" />
+            </button>
+            <div class="action-label">Add coin</div>
+          </div>
+        </div>
+
+        <!-- Wallet Selector -->
+        <div class="wallet-selector">
+          <div class="wallet-title">My Wallet</div>
+          <div class="wallet-tabs">
+            <button class="wallet-tab" id="coins-tab">My Coins</button>
+            <button class="wallet-tab active" id="cards-tab">My Cards</button>
+          </div>
+        </div>
+
+        <!-- Cards List -->
+        <div class="cards-list">
+          <div class="card black-card">
+            <div class="card-issuer">
+              <div class="card-issuer-name black-card-issuer">Cryptobank</div>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/a17f9c66981147f3b329268bf43fa97f/7b7c2c005ac88a295e5ac84e89cac7b7348a1618?placeholderIfAbsent=true"
+                alt="Card chip" class="card-chip" />
+            </div>
+            <div class="card-number">
+              <div class="number-part">**** **** ****</div>
+              <div class="number-part">4043</div>
+            </div>
+          </div>
+          <div class="card white-card">
+            <div class="card-issuer">
+              <div class="card-issuer-name white-card-issuer">Cryptobank</div>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/a17f9c66981147f3b329268bf43fa97f/12f0c5b8242378a0c9561c65d9e9827352764ad4?placeholderIfAbsent=true"
+                alt="Card chip" class="card-chip" />
+            </div>
+            <div class="card-number white-card-number">
+              <div class="number-part">**** **** ****</div>
+              <div class="number-part">4043</div>
+            </div>
+          </div>
+          <button class="add-card-button" aria-label="Add new card">
+            <div class="plus-sign">+</div>
+            <div class="add-card-text">Add Cards</div>
+          </button>
+        </div>
+
+        <!-- Transaction History -->
+        <div class="transaction-history">
+          <div class="history-header">
+            <div>History</div>
+            <button class="see-all-button">See all</button>
+          </div>
+          <div class="transaction-items" id="transaction-items">
+            <!-- Transaction items will be added here by JavaScript -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Home Indicator -->
+     
+    </div>
+  </main>
+
+  <script src="/static/logic/dashboard.js"></script>
+</body>
+
+</html>

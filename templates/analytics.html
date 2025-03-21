@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iPhone Analytics UI</title>
+    <link rel="stylesheet" href="/static/style/analytics.css" />
+    <meta name="description" content="A modern expense tracking interface with iPhone-inspired design" />
+    <meta name="author" content="Lovable" />
+    <link rel="manifest" href="manifest.json">
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="title">iPhone Analytics UI</h1>
+      
+      <div class="iphone-frame">
+        
+        <div class="search-bar">
+          <div class="search-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.3-4.3"></path>
+            </svg>
+          </div>
+          <input type="text" placeholder="Search" id="search-input" />
+        </div>
+        
+        <!-- Expense Summary -->
+        <div class="expense-summary">
+          <div class="month-selector">
+            <div>
+              <span>Expenses took place in</span>
+              <span class="month">August</span>
+            </div>
+            <button class="month-toggle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="total-expenses">
+            <div class="label">Total Expenses:</div>
+            <div class="amount">$567,56</div>
+          </div>
+        </div>
+        
+        <!-- Pie Chart Container -->
+        <div class="pie-chart-container">
+          <canvas id="expense-chart"></canvas>
+        </div>
+        
+        <!-- Expense Items -->
+        <div class="expense-items" id="expense-list">
+          <!-- Expense items will be inserted here by JavaScript -->
+        </div>
+        
+        <!-- Home Indicator -->
+       
+      </div>
+      
+    </div>
+
+    <script src="/static/logic/analytics.js"></script>
+  </body>
+</html>

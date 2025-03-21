@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #ffffff;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .footer {
+    color: #a0a0a0;
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+  }
+  
+  /* iPhone Frame */
+  .iphone-frame {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    background-color: black;
+    border-radius: 40px;
+    overflow: hidden;
+    padding: 60px 20px 108px;
+    min-height: 700px;
+  }
+  
+  /* Status Bar */
+  .status-bar {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 393px;
+    height: 59px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    z-index: 10;
+  }
+  
+  .time {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    padding: 1px 12px 8px;
+    border-radius: 24px;
+  }
+  
+  .notch {
+    width: 125px;
+    height: 37px;
+    background-color: black;
+    border-radius: 100px;
+  }
+  
+  .icons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  
+  .icon {
+    width: 18px;
+    height: 18px;
+    background-color: white;
+  }
+  
+  .signal {
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6.09 12.41a1 1 0 0 1 0-1.41 1 1 0 0 1 1.41 0 5 5 0 0 0 7.07 0 1 1 0 0 1 1.41 0 1 1 0 0 1 0 1.41 7 7 0 0 1-9.9 0zm9.9-5.66a1 1 0 0 1 0 1.41 1 1 0 0 1-1.41 0 9 9 0 0 0-12.73 0 1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41 11 11 0 0 1 15.55 0zM2.75 9.17a1 1 0 0 1 0-1.42 13 13 0 0 1 18.38 0 1 1 0 0 1 0 1.42 1 1 0 0 1-1.42 0 11 11 0 0 0-15.55 0 1 1 0 0 1-1.41 0zm1.42 9.67a7 7 0 0 0 9.9 0 1 1 0 0 0 0-1.42 1 1 0 0 0-1.42 0 5 5 0 0 1-7.07 0 1 1 0 0 0-1.41 0 1 1 0 0 0 0 1.42z'/%3E%3C/svg%3E") no-repeat center center / contain;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6.09 12.41a1 1 0 0 1 0-1.41 1 1 0 0 1 1.41 0 5 5 0 0 0 7.07 0 1 1 0 0 1 1.41 0 1 1 0 0 1 0 1.41 7 7 0 0 1-9.9 0zm9.9-5.66a1 1 0 0 1 0 1.41 1 1 0 0 1-1.41 0 9 9 0 0 0-12.73 0 1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41 11 11 0 0 1 15.55 0zM2.75 9.17a1 1 0 0 1 0-1.42 13 13 0 0 1 18.38 0 1 1 0 0 1 0 1.42 1 1 0 0 1-1.42 0 11 11 0 0 0-15.55 0 1 1 0 0 1-1.41 0zm1.42 9.67a7 7 0 0 0 9.9 0 1 1 0 0 0 0-1.42 1 1 0 0 0-1.42 0 5 5 0 0 1-7.07 0 1 1 0 0 0-1.41 0 1 1 0 0 0 0 1.42z'/%3E%3C/svg%3E") no-repeat center center / contain;
+  }
+  
+  .wifi {
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 7c-3.33 0-6.5 1.34-8.84 3.7a.5.5 0 0 0 0 .68l.71.7c.18.19.48.19.65 0C6.32 10.28 9.07 9 12 9s5.68 1.28 7.49 3.08c.17.19.47.19.65 0l.71-.7a.5.5 0 0 0 0-.68A12.98 12.98 0 0 0 12 7zm0 5c-1.79 0-3.48.73-4.74 2.03-.15.16-.14.41.03.58l.7.7c.17.17.46.16.63-.03a4.46 4.46 0 0 1 6.74 0c.17.2.46.2.63.03l.7-.7c.17-.17.18-.42.03-.58A6.8 6.8 0 0 0 12 12zm-2.12 5.5c0 1.17.95 2.12 2.12 2.12s2.12-.95 2.12-2.12-.95-2.12-2.12-2.12-2.12.95-2.12 2.12z'/%3E%3C/svg%3E") no-repeat center center / contain;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 7c-3.33 0-6.5 1.34-8.84 3.7a.5.5 0 0 0 0 .68l.71.7c.18.19.48.19.65 0C6.32 10.28 9.07 9 12 9s5.68 1.28 7.49 3.08c.17.19.47.19.65 0l.71-.7a.5.5 0 0 0 0-.68A12.98 12.98 0 0 0 12 7zm0 5c-1.79 0-3.48.73-4.74 2.03-.15.16-.14.41.03.58l.7.7c.17.17.46.16.63-.03a4.46 4.46 0 0 1 6.74 0c.17.2.46.2.63.03l.7-.7c.17-.17.18-.42.03-.58A6.8 6.8 0 0 0 12 12zm-2.12 5.5c0 1.17.95 2.12 2.12 2.12s2.12-.95 2.12-2.12-.95-2.12-2.12-2.12-2.12.95-2.12 2.12z'/%3E%3C/svg%3E") no-repeat center center / contain;
+  }
+  
+  .battery {
+    position: relative;
+    width: 28px;
+    height: 14px;
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 1px;
+  }
+  
+  .battery:after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    right: -3px;
+    width: 2px;
+    height: 6px;
+    background: white;
+    border-radius: 0 1px 1px 0;
+  }
+  
+  .battery-level {
+    background-color: white;
+    height: 100%;
+    width: 80%;
+    border-radius: 1px;
+    font-size: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-weight: bold;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 16px;
+    font-size: 16px;
+    color: white;
+    padding: 3px 0;
+  }
+  
+  .back-button {
+    transform: rotate(180deg);
+    padding: 6px;
+  }
+  
+  .profile img {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    object-fit: contain;
+  }
+  
+  /* Search Bar */
+  .search-bar {
+    background-color: rgba(28, 28, 28, 1);
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0 10px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    height: 48px;
+  }
+  
+  .search-icon {
+    color: rgba(122, 122, 122, 1);
+    padding: 12px 0;
+  }
+  
+  .search-bar input {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 12px 10px;
+    color: rgba(122, 122, 122, 1);
+    font-size: 13px;
+  }
+  
+  .search-bar input::placeholder {
+    color: rgba(122, 122, 122, 1);
+  }
+  
+  /* Expense Summary */
+  .expense-summary {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .month-selector {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+  
+  .month {
+    font-weight: 800;
+    color: rgba(0, 133, 255, 1);
+  }
+  
+  .month-toggle {
+    transform: rotate(90deg);
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 6px;
+    cursor: pointer;
+  }
+  
+  .total-expenses {
+    display: flex;
+    gap: 2px;
+    font-size: 16px;
+  }
+  
+  .label {
+    color: white;
+  }
+  
+  .amount {
+    color: rgba(0, 133, 255, 1);
+  }
+  
+  /* Pie Chart Container */
+  .pie-chart-container {
+    width: 100%;
+    height: 200px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  #expense-chart {
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    max-height: 200px;
+  }
+  
+  /* Legend for pie chart colors */
+  .chart-legend {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 10px;
+  }
+  
+  .legend-color {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  
+  /* Expense Items */
+  .expense-items {
+    margin-top: 24px;
+  }
+  
+  .expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-top: 16px;
+    color: white;
+    font-size: 16px;
+  }
+  
+  .category {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-width: 75px;
+  }
+  
+  .color-dot {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+  }
+  
+  /* Home Indicator */
+  .home-indicator {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 392px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 8px;
+  }
+  
+  .indicator-bar {
+    width: 134px;
+    height: 5px;
+    background-color: white;
+    border-radius: 100px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    .iphone-frame {
+      border-radius: 30px;
+      padding: 50px 15px 90px;
+    }
+    
+    .status-bar {
+      width: 100%;
+    }
+    
+    .home-indicator {
+      width: 100%;
+    }
+  }
