@@ -446,33 +446,40 @@
   border-radius: 10px;
 }
 
+.transactionItems {
+  gap: 1rem;
+}
+
 .transaction-details {
   align-self: stretch;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   white-space: nowrap;
-  justify-content: center;
-  width: 95px;
+  justify-content: space-between;
+  width: 100%;
   margin: auto 0;
-  padding: 6px 19px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: #1C1C1C;
+  margin-top: 1rem;
 }
 
 .service-detail {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 0px;
+  gap: 1px;
 }
 
 .service-title {
   color: white;
   font-size: 13px;
-  line-height: 1.8;
 }
 
 .service-category {
   color: rgba(129, 129, 129, 1);
   font-size: 8px;
-  line-height: 3;
 }
 
 .transaction-amount {
