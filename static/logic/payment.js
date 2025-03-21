@@ -97,4 +97,6 @@ document.addEventListener('DOMContentLoaded', function() {
     updateTime();
     setInterval(updateTime, 60000);
   });
-  
+  document.getElementById("goBackButton").addEventListener("click", function() {
+    window.history.back(); // This navigates back to the previous page in the browser's history
+});

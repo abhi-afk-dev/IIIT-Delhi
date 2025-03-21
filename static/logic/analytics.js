@@ -189,3 +189,6 @@ const expenseCategories = [
   
   // Initialize the app when the DOM is loaded
   document.addEventListener('DOMContentLoaded', initApp);
+  document.getElementById("goBackButton").addEventListener("click", function() {
+    window.history.back(); // This navigates back to the previous page in the browser's history
+});

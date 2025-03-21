@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>iPhone Analytics UI</title>
   <link rel="stylesheet" href="/static/style/analytics.css" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="description" content="A modern expense tracking interface with iPhone-inspired design" />
-  <meta name="author" content="Lovable" />
   <link rel="manifest" href="manifest.json">
   <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
   <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
@@ -24,7 +25,7 @@
           <!-- <img class="back-button"
           src="https://imgs.search.brave.com/CrPAhxe0YZySyhSuCBC6HS0mvK7HaqNj4UV3ay_QBcs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tYXhj/ZG4uaWNvbnM4LmNv/bS9wYWNrcy9wcmV2/aWV3LWljb24vYXJy/b3dzLnN2Zw"
           alt="Back" /> -->
-          <div class="back-button">&gt;</div>
+          <div class="back-button" id="goBackButton">&gt;</div>
           <div class="title">Analytics</div>
           <img
             src="https://cdn.builder.io/api/v1/image/assets/841a7e3f1ac84770b1486b2c2e846a34/3e69cb854d7cf404708292b56ca67da489540751?placeholderIfAbsent=true"

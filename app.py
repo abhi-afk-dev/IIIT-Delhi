@@ -1,4 +1,5 @@
-from flask import Flask, request, jsonify,render_template
+from flask import Flask, request, jsonify,render_template,send_from_directory
+import os
 
 app = Flask(__name__)
 
@@ -11,8 +12,8 @@ def analytics():
     return render_template('analytics.html')
 
 @app.route('/')
-def dashboard():
-    return render_template('dashboard.html')
+def index():
+    return send_from_directory('.','index.html')
 
 @app.route('/payment/')
 def payment():
@@ -34,4 +35,5 @@ def stat():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
 

@@ -8,11 +8,11 @@
 body {
   background-color: #ffffff;
   color: white;
-  min-height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 
 /* Header */
@@ -41,8 +41,7 @@ body {
   overflow: hidden;
   white-space: nowrap;
   justify-content: space-between;
-  padding: 3px 0;
-  border-radius: 25px;
+  /* padding: 3px 0; */
 }
 
 .back-button {
@@ -100,12 +99,10 @@ body {
 .iphone-frame {
   position: relative;
   width: 100%;
-  max-width: 380px;
+  /* max-width: 380px; */
   background-color: black;
-  border-radius: 40px;
   overflow: hidden;
-  padding: 60px 20px 108px;
-  min-height: 700px;
+  padding:0px 20px 108px;
 }
 
 /* Status Bar */
@@ -208,6 +205,8 @@ body {
 .back-button {
   transform: rotate(180deg);
   padding: 6px;
+  cursor: pointer;
+
 }
 
 .profile img {
@@ -383,20 +382,4 @@ body {
   height: 5px;
   background-color: white;
   border-radius: 100px;
-}
-
-/* Responsive Design */
-@media (max-width: 480px) {
-  .iphone-frame {
-    border-radius: 30px;
-    padding: 50px 15px 90px;
-  }
-
-  .status-bar {
-    width: 100%;
-  }
-
-  .home-indicator {
-    width: 100%;
-  }
 }

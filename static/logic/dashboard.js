@@ -82,3 +82,6 @@ document.addEventListener('DOMContentLoaded', function() {
       // Implement see all transactions functionality here
     });
   });
+  document.getElementById("goBackButton").addEventListener("click", function() {
+    window.history.back(); // This navigates back to the previous page in the browser's history
+});

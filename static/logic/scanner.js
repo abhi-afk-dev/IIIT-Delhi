@@ -15,4 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
       // You could show a menu here
     });
   });
-  
+  document.getElementById("goBackButton").addEventListener("click", function() {
+    window.history.back(); // This navigates back to the previous page in the browser's history
+});

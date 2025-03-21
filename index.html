@@ -5,8 +5,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Crypto Wallet</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/static/style/style.css">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
   <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
 </head>
@@ -14,7 +17,7 @@
 <body>
   <main class="app-container">
     <div class="wallet-layout">
-     
+
       <div class="wallet-content">
         <!-- User Header -->
         <div class="user-header">
@@ -40,13 +43,13 @@
           <div class="balance-label">Total Balance</div>
           <div class="balance-card">
             <div class="balance-amount">
-              <span class="currency-symbol">$</span>1,357.46
+              <span class="currency-symbol1">$</span>1,357.46
             </div>
             <div class="balance-growth">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets/a17f9c66981147f3b329268bf43fa97f/b3905918-05b7-4de8-9a0e-7c8385c8770d?placeholderIfAbsent=true"
                 alt="Growth indicator" class="growth-indicator" />
-              0.09<span class="currency-symbol">$</span>(0,29%)
+              <span class="currency-symbol2">$</span>0.09(0,29%)
             </div>
           </div>
         </div>
@@ -54,7 +57,7 @@
         <!-- Action Buttons -->
         <div class="action-buttons">
           <div class="action-button">
-            <button aria-label="Send">
+            <button onclick="window.location.href='/scanner';" aria-label="Send">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets/a17f9c66981147f3b329268bf43fa97f/8d45fbb2d9b1bbea99f69ce101c69ab6602b8995?placeholderIfAbsent=true"
                 alt="Send icon" class="action-icon" />
@@ -90,36 +93,35 @@
         <!-- Duplicate Action Buttons (as in original layout) -->
         <div class="action-buttons">
           <div class="action-button">
-            <button aria-label="Send">
+            <button onclick="window.location.href='/payment';" aria-label="Contact">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets/a17f9c66981147f3b329268bf43fa97f/8d45fbb2d9b1bbea99f69ce101c69ab6602b8995?placeholderIfAbsent=true"
-                alt="Send icon" class="action-icon" />
+                src="https://cdn.builder.io/api/v1/image/assets/a17f9c66981147f3b329268bf43fa97f/bd5ea4c0134296c338ef10b44ad1ab4a5a875ca6?placeholderIfAbsent=true"
+                class="action-icon" alt="Contacts">
             </button>
-            <div class="action-label">Send</div>
+            <div class="action-label">Contact</div>
           </div>
           <div class="action-button">
-            <button aria-label="Receive">
+            <button onclick="window.location.href='/analytics';" aria-label="analytics">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets/a17f9c66981147f3b329268bf43fa97f/2f6de337861f2b79ba462a06f8b49a0f848114b3?placeholderIfAbsent=true"
-                alt="Receive icon" class="action-icon" />
-            </button>
-            <div class="action-label">Receive</div>
+                src="https://cdn.builder.io/api/v1/image/assets/a17f9c66981147f3b329268bf43fa97f/59c1e4f3417b366e17ffdcc213de112b7e28f7c9?placeholderIfAbsent=true"
+                class="action-icon" alt="Analytics">
+              <div class="action-label">Analytics</div>
           </div>
           <div class="action-button">
-            <button aria-label="Swap">
+            <button onclick="window.location.href='/stat';" aria-label="Statistics">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets/a17f9c66981147f3b329268bf43fa97f/826c981a7729d371fc8d62bd0063d354e11fbd41?placeholderIfAbsent=true"
-                alt="Swap icon" class="action-icon" />
+                src="https://cdn.builder.io/api/v1/image/assets/a17f9c66981147f3b329268bf43fa97f/be92218a8f236229d205cabd442b02d42a58d878?placeholderIfAbsent=true"
+                class="action-icon" alt="Statistics">
             </button>
-            <div class="action-label">Swap</div>
+            <div class="action-label">Statistics</div>
           </div>
           <div class="action-button">
-            <button aria-label="Add coin">
+            <button aria-label="Recharge">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets/a17f9c66981147f3b329268bf43fa97f/83f5225e6ba88d39a60bf7eb2953d3821991340c?placeholderIfAbsent=true"
-                alt="Add coin icon" class="action-icon" />
+                src="https://cdn.builder.io/api/v1/image/assets/a17f9c66981147f3b329268bf43fa97f/6427b6ea935dce924cdee87c5b10d880ab662be6?placeholderIfAbsent=true"
+                class="action-icon" alt="Recharge">
             </button>
-            <div class="action-label">Add coin</div>
+            <div class="action-label">Recharge</div>
           </div>
         </div>
 
@@ -163,21 +165,64 @@
             <div class="add-card-text">Add Cards</div>
           </button>
         </div>
-
-        <!-- Transaction History -->
-        <div class="transaction-history">
-          <div class="history-header">
-            <div>History</div>
-            <button class="see-all-button">See all</button>
-          </div>
-          <div class="transaction-items" id="transaction-items">
             <!-- Transaction items will be added here by JavaScript -->
+            <section class="transaction-section">
+              <div class="transaction-header">
+                <div class="history-title">History</div>
+                <button class="see-all-button">See all</button>
+              </div>
+              <div class="transaction-list">
+                <div class="transactionItems">
+                  <!-- Transaction items will be added here via JavaScript -->
+                  <div class="transaction-details">
+                    <div class="service-detail">
+                      <div class="service-title" style="font-size:20px">Figma</div>
+                      <div class="service-category" style="font-size:12px">creative</div>
+                    </div>
+                    <div class="transaction-amount">
+                      <div class="amount">-0.33$</div>
+                      <div class="card-number">**** 9054</div>
+                    </div>
+                  </div>
+                  <div class="transaction-details">
+                    <div class="service-detail">
+                      <div class="service-title" style="font-size:20px">Youtube</div>
+                      <div class="service-category" style="font-size:12px">Entertainment</div>
+                    </div>
+                    <div class="transaction-amount">
+                      <div class="amount">-0.44$</div>
+                      <div class="card-number">**** 9054</div>
+                    </div>
+                  </div>
+                  <div class="transaction-details">
+                    <div class="service-detail">
+                      <div class="service-title" style="font-size:20px">Spotify</div>
+                      <div class="service-category" style="font-size:12px">Entertainment</div>
+                    </div>
+                    <div class="transaction-amount">
+                      <div class="amount">-0.69$</div>
+                      <div class="card-number">**** 9054</div>
+                    </div>
+                  </div>
+                  <div class="transaction-details">
+                    <div class="service-detail">
+                      <div class="service-title" style="font-size:20px">Netflix</div>
+                      <div class="service-category" style="font-size:12px">Entertainment</div>
+                    </div>
+                    <div class="transaction-amount">
+                      <div class="amount">-0.1$</div>
+                      <div class="card-number">**** 9054</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
       </div>
 
       <!-- Home Indicator -->
-     
+
     </div>
   </main>
 

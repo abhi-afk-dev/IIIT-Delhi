@@ -1,22 +1,30 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>QR Scanner</title>
   <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <link rel="stylesheet" href="/static/style/scanner.css">
 </head>
+
 <body>
   <div class="container">
     <div class="qr-scanner">
-      
+
 
       <!-- Header -->
       <header class="qr-header">
-        <div class="header-text">Scan to QR code</div>
-        <img src="https://cdn.builder.io/api/v1/image/assets/841a7e3f1ac84770b1486b2c2e846a34/3e69cb854d7cf404708292b56ca67da489540751?placeholderIfAbsent=true" alt="QR Scanner" class="header-icon">
+        <div class="left">
+          <div class="back-button" id="goBackButton">&lt;</div>
+          <div class="header-text">Scan to QR code</div>
+        </div>
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/841a7e3f1ac84770b1486b2c2e846a34/3e69cb854d7cf404708292b56ca67da489540751?placeholderIfAbsent=true"
+          alt="QR Scanner" class="header-icon">
       </header>
 
       <!-- Main Content -->
@@ -24,21 +32,28 @@
         <h1 class="main-title">Show your QR code</h1>
         <p class="main-subtitle">Bring the QR in the frame</p>
         <div class="scanner-frame">
-          <img src="https://cdn.builder.io/api/v1/image/assets/841a7e3f1ac84770b1486b2c2e846a34/e183852906a64cad6d47f7944bbd26ab3ad9f9b3?placeholderIfAbsent=true" alt="QR Scanner Frame" class="frame-image">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/841a7e3f1ac84770b1486b2c2e846a34/e183852906a64cad6d47f7944bbd26ab3ad9f9b3?placeholderIfAbsent=true"
+            alt="QR Scanner Frame" class="frame-image">
         </div>
       </main>
 
       <!-- Actions -->
       <div class="qr-actions">
-        <button class="action-button files-button" aria-label="Open files"></button>
-        <button class="action-button more-button" aria-label="Additional actions"></button>
+        <button class="action-button files-button" aria-label="Open files"> 
+          <img src="/static/File Image.svg" alt="">
+        </button>
+        <button class="action-button more-button" aria-label="Additional actions">
+          <img src="/static/Scann.svg" alt="">
+        </button>
       </div>
 
       <!-- Home Indicator -->
-      
+
     </div>
   </div>
 
   <script src="/static/logic/scanner.js"></script>
 </body>
+
 </html>

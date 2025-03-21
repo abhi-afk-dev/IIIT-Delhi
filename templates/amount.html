@@ -1,115 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wallet App</title>
-    <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="/static/style/amount.css" />
-  </head>
-  <body>
-    <main class="main">
-      <div class="wallet-layout">
-        <div class="recipient">
-          <div class="recipient-name">to Zangetsu</div>
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/841a7e3f1ac84770b1486b2c2e846a34/3e69cb854d7cf404708292b56ca67da489540751?placeholderIfAbsent=true"
-            alt="Profile"
-            class="profile-img"
-          />
-        </div>
-        <div class="content">
-          <div class="wallet-card">
-            <div class="wallet-label">WALLET</div>
-            <div class="card-container">
-              <div class="card-details">
-                <h4>Debit Card</h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wallet App</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="/static/style/amount.css" />
+</head>
+
+<body>
+  <main class="main">
+    <div class="wallet-layout">
+      <div class="recipient">
+        <div class="back-button" id="goBackButton">&gt;</div>
+        <div class="recipient-name">to Zangetsu</div>
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/841a7e3f1ac84770b1486b2c2e846a34/3e69cb854d7cf404708292b56ca67da489540751?placeholderIfAbsent=true"
+          alt="Profile" class="profile-img" />
+      </div>
+      <div class="content">
+        <div class="wallet-card">
+          <div class="wallet-label">WALLET</div>
+          <div class="card-container">
+            <div class="card-details">
+              <h4>Debit Card</h1>
                 <h6>**** 4043</h6>
-              </div>
-              <div class="card-balance">$2,357.46</div>
             </div>
-          </div>
-          
-          <div class="amount-input">
-            <div class="amount-label">How much?</div>
-            <div class="amount-value">$<span id="amount-display">1,265</span><span class="cursor">|</span></div>
-          </div>
-          
-          <div class="message-input">
-            <div class="message-label">Message</div>
-            <input
-              type="text"
-              placeholder="Add your message"
-              class="message-field"
-            />
-            <button class="send-button">Send</button>
+            <div class="card-balance">$2,357.46</div>
           </div>
         </div>
-        
-        <div class="numeric-keypad">
-          <div class="keypad-container">
-            <div class="keypad-row">
-              <button class="keypad-button" data-value="1">
-                <div class="key-number">1</div>
-              </button>
-              <button class="keypad-button" data-value="2">
-                <div class="key-number">2</div>
-                <div class="key-letters">ABC</div>
-              </button>
-              <button class="keypad-button" data-value="3">
-                <div class="key-number">3</div>
-                <div class="key-letters">DEF</div>
-              </button>
-            </div>
-            
-            <div class="keypad-row">
-              <button class="keypad-button" data-value="4">
-                <div class="key-number">4</div>
-                <div class="key-letters">GHI</div>
-              </button>
-              <button class="keypad-button" data-value="5">
-                <div class="key-number">5</div>
-                <div class="key-letters">JKL</div>
-              </button>
-              <button class="keypad-button" data-value="6">
-                <div class="key-number">6</div>
-                <div class="key-letters">MNO</div>
-              </button>
-            </div>
-            
-            <div class="keypad-row">
-              <button class="keypad-button" data-value="7">
-                <div class="key-number">7</div>
-                <div class="key-letters">PQRS</div>
-              </button>
-              <button class="keypad-button" data-value="8">
-                <div class="key-number">8</div>
-                <div class="key-letters">TUV</div>
-              </button>
-              <button class="keypad-button" data-value="9">
-                <div class="key-number">9</div>
-                <div class="key-letters">WXYZ</div>
-              </button>
-            </div>
-            
-            <div class="keypad-row">
-              <div class="empty-key"></div>
-              <button class="keypad-button" data-value="0">
-                <div class="key-number">0</div>
-              </button>
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/841a7e3f1ac84770b1486b2c2e846a34/0bbd05b6722b25b04dc306917797de54e8686250?placeholderIfAbsent=true"
-                class="delete-key"
-                alt="Delete"
-                data-value="delete"
-              />
-            </div>
-          </div>
-          
-          
+
+        <div class="amount-input">
+          <div class="amount-label">How much?</div>
+          <div class="amount-value">$<span id="amount-display">1,265</span><span class="cursor">|</span></div>
+        </div>
+
+        <div class="message-input">
+          <div class="message-label">Message</div>
+          <input type="text" placeholder="Add your message" class="message-field" />
+          <button class="send-button">Send</button>
         </div>
       </div>
-    </main>
-    <script src="/static/logic/amount.js"></script>
-  </body>
+
+      <div class="numeric-keypad">
+        <div class="keypad-container">
+          <div class="keypad-row">
+            <button class="keypad-button" data-value="1">
+              <div class="key-number">1</div>
+            </button>
+            <button class="keypad-button" data-value="2">
+              <div class="key-number">2</div>
+              <div class="key-letters">ABC</div>
+            </button>
+            <button class="keypad-button" data-value="3">
+              <div class="key-number">3</div>
+              <div class="key-letters">DEF</div>
+            </button>
+          </div>
+
+          <div class="keypad-row">
+            <button class="keypad-button" data-value="4">
+              <div class="key-number">4</div>
+              <div class="key-letters">GHI</div>
+            </button>
+            <button class="keypad-button" data-value="5">
+              <div class="key-number">5</div>
+              <div class="key-letters">JKL</div>
+            </button>
+            <button class="keypad-button" data-value="6">
+              <div class="key-number">6</div>
+              <div class="key-letters">MNO</div>
+            </button>
+          </div>
+
+          <div class="keypad-row">
+            <button class="keypad-button" data-value="7">
+              <div class="key-number">7</div>
+              <div class="key-letters">PQRS</div>
+            </button>
+            <button class="keypad-button" data-value="8">
+              <div class="key-number">8</div>
+              <div class="key-letters">TUV</div>
+            </button>
+            <button class="keypad-button" data-value="9">
+              <div class="key-number">9</div>
+              <div class="key-letters">WXYZ</div>
+            </button>
+          </div>
+
+          <div class="keypad-row">
+            <div class="empty-key"></div>
+            <button class="keypad-button" data-value="0">
+              <div class="key-number">0</div>
+            </button>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/841a7e3f1ac84770b1486b2c2e846a34/0bbd05b6722b25b04dc306917797de54e8686250?placeholderIfAbsent=true"
+              class="delete-key" alt="Delete" data-value="delete" />
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </main>
+  <script src="/static/logic/amount.js"></script>
+</body>
+
 </html>

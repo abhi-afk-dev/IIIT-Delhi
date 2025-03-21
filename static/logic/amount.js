@@ -73,4 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
       return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     }
   });
+  document.getElementById("goBackButton").addEventListener("click", function() {
+    window.history.back(); // This navigates back to the previous page in the browser's history
+});
   

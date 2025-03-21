@@ -1,146 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Payment App</title>
-    <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="/static/style/payment.css" />
-  </head>
-  <body>
-    <div class="app-container">
-     
 
-      <div class="header">
-        <div class="empty-back"></div>
-        <div class="title">Payment</div>
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/6440323c68dde860ae63fb8689528b34553b849f?placeholderIfAbsent=true"
-          class="settings-icon"
-        />
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment App</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="/static/style/payment.css" />
+</head>
 
-      <div class="search-input">
-        <input type="text" placeholder="Enter number or name" />
-      </div>
+<body>
+  <div class="app-container">
 
-      <div class="section-title">YOUR CONTACTS</div>
 
-      <div class="contacts-list">
-        <div class="contact-card">
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/c6badf520ffd91225c3570858a86fc2eabbb60a4?placeholderIfAbsent=true"
-            alt="Cameron Williamson"
-          />
-          <div class="contact-name">Cameron Williamson</div>
-        </div>
-        <div class="contact-card">
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/2249571eada6cdae4877e5c07bc59157ab63d561?placeholderIfAbsent=true"
-            alt="Theresa Webb"
-          />
-          <div class="contact-name">Theresa Webb</div>
-        </div>
-        <div class="contact-card">
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/353fc5f17f51fbcbbc8fbd416c4811e8353283ff?placeholderIfAbsent=true"
-            alt="Devon Lane"
-          />
-          <div class="contact-name">Devon Lane</div>
-        </div>
-        <div class="contact-card">
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/2af94b14a94527231e04a742e64e1e086a3b312b?placeholderIfAbsent=true"
-            alt="Jerome Bell"
-          />
-          <div class="contact-name">Jerome Bell</div>
-        </div>
-        <div class="contact-card">
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/d6a6cfa8571aa6cc711c6a8e36b7515aa28c400d?placeholderIfAbsent=true"
-            alt="Ronald Richards"
-          />
-          <div class="contact-name">Ronald Richards</div>
-        </div>
-      </div>
-
-      <div class="section-title">BY CARD NUMBER</div>
-
-      <div class="search-input">
-        <input type="text" placeholder="Enter card number" />
-      </div>
-
-      <div class="section-title">Recent</div>
-
-      <div class="payment-cards">
-        <div class="payment-card dark">
-          <div class="card-title">Debit Card</div>
-          <div class="card-name">Devon lane</div>
-          <div class="card-details">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/7b7c2c005ac88a295e5ac84e89cac7b7348a1618?placeholderIfAbsent=true"
-              class="card-logo"
-            />
-            <div class="card-number">
-              <span>**** **** ****</span>
-              <span>4043</span>
-            </div>
-          </div>
-        </div>
-        <div class="payment-card light">
-          <div class="card-title">Debit Card</div>
-          <div class="card-name">Devon lane</div>
-          <div class="card-details">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/12f0c5b8242378a0c9561c65d9e9827352764ad4?placeholderIfAbsent=true"
-              class="card-logo"
-            />
-            <div class="card-number">
-              <span>**** **** ****</span>
-              <span>2043</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="section-title">ACTION</div>
-
-      <div class="action-buttons">
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/692bcec0-e32f-46b4-99a2-443c2384491d?placeholderIfAbsent=true"
-          class="action-button"
-        />
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/1d819164-d26e-4406-b19e-3188557ba490?placeholderIfAbsent=true"
-          class="action-button"
-        />
-      </div>
-
-      <div class="section-title">TEMPLATES</div>
-
-      <div class="templates">
-        <div class="template">
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/262a00092b5fd44beb85c005b690eb22191a9d1b?placeholderIfAbsent=true"
-            alt="Invoices"
-          />
-          <div class="template-title">Invoices for Payments</div>
-        </div>
-        <div class="template money-payment">
-          <div class="template-title">Money Payment</div>
-        </div>
-        <div class="template">
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/d2ae55d79a74093fb7dcae05ff0b371481985196?placeholderIfAbsent=true"
-            alt="Charity"
-          />
-          <div class="template-title">Contribute to Charity</div>
-        </div>
-      </div>
-
-      
+    <div class="header">
+      <span style="color: white; font-size: 30px;" id="goBackButton">&lt;</span>
+      <h3>Payment</h3>
+      <img
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/6440323c68dde860ae63fb8689528b34553b849f?placeholderIfAbsent=true"
+        class="settings-icon" />
     </div>
 
-    <script src="/static/logic/payment.js"></script>
-  </body>
+    <div class="search-input">
+      <input type="text" placeholder="Enter number or name" />
+    </div>
+
+    <div class="section-title">YOUR CONTACTS</div>
+
+    <div class="contacts-list">
+      <div class="contact-card">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/c6badf520ffd91225c3570858a86fc2eabbb60a4?placeholderIfAbsent=true"
+          alt="Cameron Williamson" />
+        <div class="contact-name">Cameron Williamson</div>
+      </div>
+      <div class="contact-card">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/2249571eada6cdae4877e5c07bc59157ab63d561?placeholderIfAbsent=true"
+          alt="Theresa Webb" />
+        <div class="contact-name">Theresa Webb</div>
+      </div>
+      <div class="contact-card">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/353fc5f17f51fbcbbc8fbd416c4811e8353283ff?placeholderIfAbsent=true"
+          alt="Devon Lane" />
+        <div class="contact-name">Devon Lane</div>
+      </div>
+      <div class="contact-card">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/2af94b14a94527231e04a742e64e1e086a3b312b?placeholderIfAbsent=true"
+          alt="Jerome Bell" />
+        <div class="contact-name">Jerome Bell</div>
+      </div>
+      <div class="contact-card">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/d6a6cfa8571aa6cc711c6a8e36b7515aa28c400d?placeholderIfAbsent=true"
+          alt="Ronald Richards" />
+        <div class="contact-name">Ronald Richards</div>
+      </div>
+    </div>
+
+    <div class="section-title">BY CARD NUMBER</div>
+
+    <div class="search-input">
+      <input type="text" placeholder="Enter card number" />
+    </div>
+
+    <div class="section-title">Recent</div>
+
+    <div class="payment-cards">
+      <div class="payment-card dark">
+        <div class="card-title">Debit Card</div>
+        <div class="card-name">Devon lane</div>
+        <div class="card-details">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/7b7c2c005ac88a295e5ac84e89cac7b7348a1618?placeholderIfAbsent=true"
+            class="card-logo" />
+          <div class="card-number">
+            <span>**** **** ****</span>
+            <span>4043</span>
+          </div>
+        </div>
+      </div>
+      <div class="payment-card light">
+        <div class="card-title">Debit Card</div>
+        <div class="card-name">Devon lane</div>
+        <div class="card-details">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/12f0c5b8242378a0c9561c65d9e9827352764ad4?placeholderIfAbsent=true"
+            class="card-logo" />
+          <div class="card-number">
+            <span>**** **** ****</span>
+            <span>2043</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-title">ACTION</div>
+
+    <div class="action-buttons">
+      <img src="/static/Frame 185.svg" alt="">
+
+      <img src="/static/Frame 184.svg" alt="">
+    </div>
+
+    <div class="section-title">TEMPLATES</div>
+
+    <div class="templates">
+      <div class="template">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/262a00092b5fd44beb85c005b690eb22191a9d1b?placeholderIfAbsent=true"
+          alt="Invoices" />
+        <div class="template-title">Invoices for Payments</div>
+      </div>
+      <div class="template money-payment">
+        <img src="/static/Devices/iPhone.svg" alt="">
+        <div class="template-title">Money Payment</div>
+      </div>
+      <div class="template">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/d2ae55d79a74093fb7dcae05ff0b371481985196?placeholderIfAbsent=true"
+          alt="Charity" />
+        <div class="template-title">Contribute to Charity</div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <script src="/static/logic/payment.js"></script>
+</body>
+
 </html>

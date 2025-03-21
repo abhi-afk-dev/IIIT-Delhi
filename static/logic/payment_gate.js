@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     // Handle back button click
     const backButton = document.querySelector('.back-button');
@@ -8,4 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
       alert('Going back to previous screen');
     });
   });
-  
+  document.getElementById("goBackButton").addEventListener("click", function() {
+    window.history.back(); // This navigates back to the previous page in the browser's history
+});
