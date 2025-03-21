@@ -298,7 +298,7 @@ body {
   height: 200px;
   margin: 20px 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   position: relative;
 }
@@ -313,7 +313,7 @@ body {
 /* Legend for pie chart colors */
 .chart-legend {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   justify-content: space-between;
